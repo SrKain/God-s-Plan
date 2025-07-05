@@ -6,7 +6,7 @@ notion_bp = Blueprint('notion', __name__)
 
 # Configurações da API do Notion
 NOTION_TOKEN = 'ntn_v799322124936RT7TDOlQWnRmhMKWb2BOdU1AAu5Fbr7BT'
-NOTION_DATABASE_ID = '2181dc6ee08180d0a2d8ca2fc4a8dd61'
+NOTION_DATABASE_ID = '2181dc6ee081807a98fde92411ca08c3'
 
 @notion_bp.route('/api/notion/database', methods=['GET'])
 def get_notion_database():
