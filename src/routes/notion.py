@@ -43,13 +43,13 @@ def get_notion_database():
             processed_cards = []
             for page in data.get('results', []):
                 card = {
-                    'id': page.get('id', ''),
-                    'creator': get_property_value(page.get('properties', {}).get('creator')),
-                    'description': get_property_value(page.get('properties', {}).get('desc')),
-                    'date': get_property_value(page.get('properties', {}).get('date')),
-                    'value': float(get_property_value(page.get('properties', {}).get('value')) or 0),
-                    'notionUrl': page.get('url', '')
-                }
+    'id': page.get('id', ''),
+    'creator': page.get('created_by', {}).get('name', ''),  # created_by direto no page
+    'description': get_property_value(page.get('properties', {}).get('desc')),
+    'date': page.get('created_time', ''),  # created_time direto no page
+    'value': float(get_property_value(page.get('properties', {}).get('Value')) or 0),  # observe "Value" maiúsculo
+    'notionUrl': page.get('url', '')
+}
                 processed_cards.append(card)
             
             return jsonify({
