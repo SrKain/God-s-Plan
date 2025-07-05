@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>God's Plan</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Background overlay for touch effect -->
+    <div class="background-overlay" id="backgroundOverlay"></div>
+    
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <img src="images/fleur-de-lis-gold.png" alt="Fleur de Lis" class="logo">
+            <h1 class="main-title">God's Plan</h1>
+            <div class="spacer"></div>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Total Value Section -->
+        <section class="total-value-section">
+            <div class="total-value-container">
+                <h2 class="total-label">Valor Total</h2>
+                <div class="total-amount" id="totalAmount">R$ 0,00</div>
+            </div>
+        </section>
+
+        <!-- Cards Container -->
+        <section class="cards-section">
+            <div class="cards-container" id="cardsContainer">
+                <!-- Cards will be dynamically loaded here -->
+                <div class="loading" id="loadingIndicator">
+                    <div class="loading-spinner"></div>
+                    <p>Carregando...</p>
+                </div>
+            </div>
+            
+            <!-- Load More Button -->
+            <button class="load-more-btn" id="loadMoreBtn" style="display: none;">
+                Ver Mais
+            </button>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <img src="images/fleur-de-lis-gold.png" alt="Fleur de Lis" class="footer-logo">
+            <p class="footer-text">To Life</p>
+        </div>
+    </footer>
+
+    <script src="config.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
+
